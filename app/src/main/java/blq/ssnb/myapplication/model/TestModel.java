@@ -2,6 +2,7 @@ package blq.ssnb.myapplication.model;
 
 /**
  * Created by SSNB on 2016/7/22.
+ * 随便定义的一个model
  */
 public class TestModel {
     private int type ;

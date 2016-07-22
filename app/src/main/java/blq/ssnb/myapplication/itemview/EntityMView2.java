@@ -9,6 +9,7 @@ import blq.ssnb.myapplication.model.TestModel;
 
 /**
  * Created by SSNB on 2016/7/22.
+ *
  */
 public class EntityMView2 extends AbsMViewItem<TestModel> {
 

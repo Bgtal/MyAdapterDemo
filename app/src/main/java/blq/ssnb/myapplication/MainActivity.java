@@ -1,7 +1,6 @@
 package blq.ssnb.myapplication;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;

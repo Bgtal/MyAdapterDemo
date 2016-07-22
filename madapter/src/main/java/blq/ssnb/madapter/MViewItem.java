@@ -6,7 +6,10 @@ import android.view.ViewGroup;
 
 /**
  * Created by SSNB on 2016/7/21.
- *
+ *  MViewItem不是一个View类型，它是一种ItemType的控制器
+ *  （有ItemType{@link MViewController#getViewTypeCount()}就有几个MViewItem），
+ *  它的主要职责是负责对ConvertView的创建{@link #newConvertView(Context, ViewGroup)}
+ *  和对数据的绑定{@link #bindData(View, Object)}。
  */
 public interface MViewItem<T> {
     /**

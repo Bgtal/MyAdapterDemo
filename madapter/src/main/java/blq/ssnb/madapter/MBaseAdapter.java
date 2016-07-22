@@ -1,41 +1,23 @@
 package blq.ssnb.madapter;
 
 import android.content.Context;
-import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
- * Created by SSNB on 2016/7/21.
- * 对Adapter的分装
+ * Created by SSNB on 2016/7/22.
+ *
  */
-public class MBaseAdapter<T> extends BaseAdapter {
+public abstract class MBaseAdapter<T> extends BaseAdapter{
 
     private Context mContext;
     private List<T> listData;
-    private MViewController<T> mViewController;
-    private final HashMap<Integer,MViewItem<T>> mViewItems;
-
-    /**
-     * 创建一个MBaseAdapter 对象
-     * @param context 上下文对象
-     * @param listData 数据对象
-     * @param controller Item控制器对象
-     */
-    public MBaseAdapter(Context context,List<T> listData, MViewController<T> controller){
+    public MBaseAdapter(Context context, List<T> listData){
         this.mContext = context;
-        this.listData=(listData == null?new ArrayList<T>():listData);
-        this.mViewController = controller;
-        this.mViewItems= new HashMap<>(controller.getViewTypeCount());
-        Log.e("TAG","listSize:"+this.listData.size());
+        this.listData = (listData==null?new ArrayList<T>():listData);
     }
-
     /**
      * {@inheritDoc}
      */
@@ -57,39 +39,60 @@ public class MBaseAdapter<T> extends BaseAdapter {
     public long getItemId(int position) {
         return position;
     }
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public int getItemViewType(int position) {
-        return mViewController.getItemViewType(getItem(position),position);
+
+    public Context getContext() {
+        return mContext;
     }
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public int getViewTypeCount() {
-        return mViewController.getViewTypeCount();
+
+    public void setContext(Context mContext) {
+        this.mContext = mContext;
     }
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        T data = getItem(position);
-        int type = getItemViewType(position);
-        MViewItem<T> item = mViewItems.get(type);
-        if(item==null){
-            item = mViewController.newViewItem(type);
-            mViewItems.put(type,item);
-            Log.e("TAG","new Item");
+    public List<T> getListData(){
+        return listData;
+    }
+    public void setListData(List<T> listData){
+        if(listData!=null){
+            this.listData=listData;
+        }else{
+            this.listData.clear();
         }
-        if (convertView==null){
-            item = mViewController.newViewItem(type);
-            convertView = item.newConvertView(mContext,parent);
-            Log.e("TAG","new convertView");
+    }
+
+    public void addItem(T data){
+        listData.add(data);
+        notifyDataSetChanged();
+    }
+
+    public void addItemAtIndex(T data,int index){
+        listData.add(index,data);
+        notifyDataSetChanged();
+    }
+
+    public void addItems(List<T> datas){
+        if(listData == null){
+            listData = datas;
+        }else{
+            listData.addAll(datas);
         }
-        item.bindData(convertView,data);
-        return convertView;
+        notifyDataSetChanged();
+    }
+
+    public void removeItem(T data){
+        listData.remove(data);
+        notifyDataSetChanged();
+    }
+
+    public void removeItemByIndex(int index){
+        listData.remove(index);
+        notifyDataSetChanged();
+    }
+
+    public void removeAllItem(){
+        if(listData!=null){
+            listData.clear();
+        } else {
+            listData=new ArrayList<>();
+        }
+        notifyDataSetChanged();
     }
 }

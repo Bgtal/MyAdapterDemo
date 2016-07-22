@@ -18,21 +18,20 @@ public class EntityMView3 extends AbsMViewItem<TestModel> {
 
     @Override
     protected ViewHolder initView(View convertView) {
-        mViewHolder holder = new mViewHolder();
+        MViewHolder holder = new MViewHolder();
         holder.title = (TextView) convertView.findViewById(R.id.title);
         holder.msg = (TextView)convertView.findViewById(R.id.msg);
         return holder;
     }
 
-
     @Override
     public void bindData(View convertView, TestModel data) {
-        mViewHolder holder = (mViewHolder)convertView.getTag();
+        MViewHolder holder = (MViewHolder)convertView.getTag();
         holder.title.setText(data.getTitle());
         holder.msg.setText(data.getMessage());
     }
 
-    private class mViewHolder implements ViewHolder{
+    private class MViewHolder implements ViewHolder{
         TextView title;
         TextView msg;
     }

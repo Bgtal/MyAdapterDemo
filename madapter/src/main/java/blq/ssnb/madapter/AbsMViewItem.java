@@ -1,7 +1,7 @@
 package blq.ssnb.madapter;
 
 import android.content.Context;
-import android.support.annotation.LayoutRes;
+//import android.support.annotation.LayoutRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +28,7 @@ public abstract class AbsMViewItem<T> implements MViewItem<T>{
      * 获取View所需要绑定的layout ID
      * @return 返回布局id (<code>R.layout.xxx</code>)
      */
-    @LayoutRes
+//    @LayoutRes
     protected abstract int getLayout();
 
     /**

@@ -1,7 +1,7 @@
 package blq.ssnb.madapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+//import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -24,7 +24,7 @@ public class MAdapter<T> extends MBaseAdapter<T> {
      * @param listData 数据对象
      * @param controller Item控制器对象
      */
-    public MAdapter(Context context, List<T> listData, @NonNull MViewController<T> controller){
+    public MAdapter(Context context, List<T> listData,/* @NonNull*/ MViewController<T> controller){
         super(context,listData);
         this.mViewController = controller;
         this.mViewItems= new HashMap<>(controller.getViewTypeCount());

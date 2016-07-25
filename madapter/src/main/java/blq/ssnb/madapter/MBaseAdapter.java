@@ -131,4 +131,13 @@ public abstract class MBaseAdapter<T> extends BaseAdapter{
         }
         notifyDataSetChanged();
     }
+
+    /**
+     * 更新数据
+     * @param listData 待更新数据
+     */
+    public void updateView(List<T> listData){
+        this.listData=listData;
+        notifyDataSetChanged();
+    }
 }

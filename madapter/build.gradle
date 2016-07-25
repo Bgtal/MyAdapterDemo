@@ -42,7 +42,7 @@ ext {
 
     publishedGroupId = "com.blq.ssnb"//项目前缀
     libraryName = "madapter"//lib的名字
-    libraryVersion ='0.0.4'//项目版本
+    libraryVersion ='0.0.7'//项目版本
     artifact = "madapter"//
 
     libraryDescription = ""//对项目的描述

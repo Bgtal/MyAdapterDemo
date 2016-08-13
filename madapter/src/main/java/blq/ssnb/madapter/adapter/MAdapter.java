@@ -1,4 +1,4 @@
-package blq.ssnb.madapter;
+package blq.ssnb.madapter.adapter;
 
 import android.content.Context;
 //import android.support.annotation.NonNull;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 
 import java.util.HashMap;
 import java.util.List;
+
+import blq.ssnb.madapter.item.MViewItem;
+import blq.ssnb.madapter.controller.MViewController;
 
 /**
  * Created by SSNB on 2016/7/21.

@@ -1,4 +1,4 @@
-package blq.ssnb.madapter;
+package blq.ssnb.madapter.item;
 
 import android.content.Context;
 //import android.support.annotation.LayoutRes;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
  * Created by SSNB on 2016/7/22.
  *
  */
-public abstract class AbsMViewItem<T> implements MViewItem<T>{
+public abstract class AbsMViewItem<T> implements MViewItem<T> {
     private Context mContext;
 
     /**

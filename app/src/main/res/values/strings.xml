@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyAdapterDemo</string>
+    <string name="user_method_4_introduce">这里将多个model放在一个list中展示，这时候可以继承AbsMViewController然后重写返回类型数和返回类型，或者直接继承MViewController,这里直接继承MViewController</string>
+    <string name="user_method_3_introduce">使用二中Controller的newViewItem 是直接继承MViewItem的,比较灵活可自选界面是直接new出来还是通过xml关联，但需要自己补充相关代码和缓存，这里使用继承AbsMViewItem的item，只能从xml关联</string>
+    <string name="user_method_2_introduce">继承MAdapter但是只显示一种类型的Item,这个时候Controller直接继承AbsMViewController就只要写一个方法就可以了</string>
+    <string name="user_method_1_introduce">直接继承MBaseAdapter,使用方法和BaseAdapter一样,只需要实现getView方法就可以了</string>
 </resources>

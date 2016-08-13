@@ -1,7 +1,9 @@
-package blq.ssnb.madapter;
+package blq.ssnb.madapter.controller;
 
 import android.widget.AbsListView;
 import android.widget.ListAdapter;
+
+import blq.ssnb.madapter.item.MViewItem;
 
 /**
  * Created by SSNB on 2016/7/21.

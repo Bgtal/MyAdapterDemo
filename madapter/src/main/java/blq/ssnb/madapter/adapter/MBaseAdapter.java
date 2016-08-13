@@ -1,6 +1,8 @@
-package blq.ssnb.madapter;
+package blq.ssnb.madapter.adapter;
 
 import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import java.util.ArrayList;
@@ -11,6 +13,7 @@ import java.util.List;
  * MBaseAdapter是对BaseAdapter的一个封装。
  * 主要封装了平时常用的{@link #getCount()},{@link #getItem(int)}
  * {@link #getItemId(int)} 和 add和remove方法。
+ * 所以剩下的就是实现 {@link #getView(int, View, ViewGroup)} 方法
  */
 public abstract class MBaseAdapter<T> extends BaseAdapter{
 

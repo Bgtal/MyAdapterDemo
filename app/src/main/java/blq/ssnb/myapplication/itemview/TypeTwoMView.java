@@ -3,16 +3,19 @@ package blq.ssnb.myapplication.itemview;
 import android.view.View;
 import android.widget.TextView;
 
-import blq.ssnb.madapter.AbsMViewItem;
+import blq.ssnb.madapter.item.AbsMViewItem;
 import blq.ssnb.myapplication.R;
-import blq.ssnb.myapplication.model.TestModel;
+import blq.ssnb.myapplication.model.TypeTwoModel;
 
 /**
- * Created by SSNB on 2016/7/22.
- *
+ * ================================================
+ * 作者: SSNB
+ * 日期: 2016/8/13
+ * 描述:
+ * 添加描述
+ * ================================================
  */
-public class EntityMView2 extends AbsMViewItem<TestModel> {
-
+public class TypeTwoMView extends AbsMViewItem<TypeTwoModel> {
     @Override
     protected int getLayout() {
         return R.layout.item_style_2;
@@ -26,10 +29,11 @@ public class EntityMView2 extends AbsMViewItem<TestModel> {
     }
 
     @Override
-    public void bindData(View convertView, TestModel data) {
-        MViewHolder holder = (MViewHolder)convertView.getTag();
-        holder.title.setText(data.getTitle());
+    public void bindData(View convertView, TypeTwoModel data) {
+        MViewHolder viewHolder = (MViewHolder) convertView.getTag();
+        viewHolder.title.setText(data.getMessage());
     }
+
     private class MViewHolder implements ViewHolder{
         TextView title ;
     }

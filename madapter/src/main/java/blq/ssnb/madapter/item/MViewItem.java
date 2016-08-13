@@ -1,8 +1,10 @@
-package blq.ssnb.madapter;
+package blq.ssnb.madapter.item;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+
+import blq.ssnb.madapter.controller.MViewController;
 
 /**
  * Created by SSNB on 2016/7/21.

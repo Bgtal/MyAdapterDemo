@@ -1,21 +1,21 @@
 package blq.ssnb.myapplication.model;
 
 /**
- * Created by SSNB on 2016/7/22.
- * 随便定义的一个model
+ * ================================================
+ * 作者: SSNB
+ * 日期: 2016/8/13
+ * 描述:
+ * 添加描述
+ * ================================================
  */
-public class TestModel {
-    private int type ;
+public class TypeOneModel extends BaseModel{
+
+    public TypeOneModel(){
+        setType(ModelType.TYPE_ONE);
+    }
+
     private String title;
     private String message;
-
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
-    }
 
     public String getTitle() {
         return title;

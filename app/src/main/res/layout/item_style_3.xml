@@ -19,5 +19,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/ll_tv_random"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/item_bg_4"
+        android:layout_margin="5dp"
+        android:gravity="center"/>
 
 </LinearLayout>

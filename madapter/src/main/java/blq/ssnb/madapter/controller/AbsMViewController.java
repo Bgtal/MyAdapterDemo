@@ -1,4 +1,4 @@
-package blq.ssnb.madapter;
+package blq.ssnb.madapter.controller;
 
 /**
  * Created by SSNB on 2016/7/22.
